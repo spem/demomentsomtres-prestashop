@@ -4,13 +4,14 @@
  * Plugin Name: DeMomentSomTres Prestashop 
  * Plugin URI: http://www.demomentsomtres.com/
  * Description: Prestashop Integration based on web services
- * Version: 1.2
+ * Version: 1.3
  * Author: Marc Queralt
  * Author URI: http://demomentsomtres.com
  * Change story
  * 1.0 - Initial version get category contents based on file cache and shortcode
  * 1.1 - Shortcode demomentsomtres-prestashop-category-desc added
  * 1.2 - Shortcode demomentsotmres-prestashop-manufacturers
+ * 1.3 - Multilingual shop supported
  */
 
 include_once 'demomentsomtres-ps-cache.php';
@@ -57,7 +58,7 @@ function demomentsomtres_prestashop_category($attr) {
         $name = $xmlSub->xpath('/prestashop/category/name/language[@id="' . $lang . '"]');
         $meta = $xmlSub->xpath('/prestashop/category/meta_title/language[@id="' . $lang . '"]');
         $subCatList.='<li id="cat' . $id . '" class="prestashop category">';
-        $subCatList.='<a href="' . $ps_url . '/index.php?id_category=' . $id . '&controller=category" title="' . $meta[0] . '">';
+        $subCatList.='<a href="' . $ps_url . '/index.php?id_category=' . $id . '&controller=category&id_lang='.$lang.'" title="' . $meta[0] . '">';
         $subCatList.=$name[0];
         $subCatList.='</a>';
         $subCatList.='</li>';

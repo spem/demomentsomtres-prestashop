@@ -4,7 +4,7 @@ Donate link: http://demomentsomtres.com/
 Tags: prestashop, eCommerce, shortcode, prestashop integration
 Requires at least: 3.4
 Tested up to: 3.4
-Stable tag: 1.0
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,8 @@ This plugin aims to help integrate contents from Prestashop into WordPress. It u
 == Screenshots ==
 
 == Changelog ==
+= 1.3 =
+* multilanguage prestashop supported on links
 
 = 1.0 =
 * initial version: demomentsomtres-prestashop-category shortcode.
